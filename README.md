@@ -1,1 +1,7 @@
-# image_classification_superhero
+This code is for an image classification task where the goal is to classify images of two different superhero characters (Deadpool and Hulk). The code has several key aspects:
+
+    *Data Loading: The code loads the images from two different subfolders in the 'data' directory, using the os and cv2 libraries. It also removes any unwanted image formats using the imghdr library.
+    *Data Preprocessing: The code resizes the images to a standard size (256x256) and scales the pixel values to be between 0 and 1 using the tf.keras.utils.image_dataset_from_directory() function. The images are also split into training, validation, and test sets.
+    *Modelling: The code builds a convolutional neural network (CNN) model using the tf.keras.models.Sequential() class. The model consists of several layers, including convolutional, max-pooling, and fully connected layers. The model is compiled using the adam optimizer and the categorical_crossentropy loss function.
+    *Training: The model is trained using the fit() method, which takes in the training and validation data sets. The code also uses several callbacks, such as the EarlyStopping and ModelCheckpoint callbacks to monitor the training process and save the best model.
+    *Evaluation: The model is evaluated using the evaluate() method, which takes in the test data set. The code also uses the sklearn.metrics.classification_report() function to generate a classification report, which includes various metrics such as precision, recall, and F1-score for each class.
